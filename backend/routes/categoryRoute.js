@@ -11,7 +11,7 @@ const { taskValidation } = require("../validation");
 const router = express.Router();
 
 router.get("/welcome", demoFunction);
-router.post("/posttask", taskValidation, postTask);
+router.post("/posttask", postTask);
 router.get("/tasklist", taskList);
 router.get("/taskdetails/:id", taskDetails);
 router.put("/updatetask/:id", updateTask);

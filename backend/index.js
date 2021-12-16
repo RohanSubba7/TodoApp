@@ -3,12 +3,14 @@ require("dotenv").config();
 const db = require("./database/connection");
 const bodyParser = require("body-parser");
 const expressValidator = require("express-validator");
+const cors = require("cors");
 
 const categoryRoute = require("./routes/categoryRoute");
 
 const app = express();
 
 //middleware
+app.use(cors());
 app.use(bodyParser.json({}));
 app.use(expressValidator());
 
